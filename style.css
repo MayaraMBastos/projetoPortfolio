@@ -3,6 +3,8 @@ copiar o code
 git clone endereço copiado
     */
 
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap");
+
 :root {
   --body-bg-color: #22212c;
   --text-color: #837e9f;
@@ -15,23 +17,27 @@ body {
   background-color: var(--body-bg-color);
   width: 100vw;
   height: 100vh;
-
 }
 
-.caixa-principal{
+.caixa-principal {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 450px 1fr;
   /*grid-template-rows: ;*/
-  grid-template-areas: "lateral main"
-                       "rodape rodape";
+  grid-template-areas:
+    "lateral main"
+    "rodape rodape";
+  gap: 20px;
 }
 
-#caixa{
+#caixa {
   background-color: var(--bg-cards);
-  height: 200px;
+  border-radius: 20px;
 }
 
-aside{
+/*------LATERAL-----*/
+
+aside {
   margin-right: 40px;
   grid-area: lateral;
 }
@@ -44,10 +50,82 @@ aside{
   top: 40px;
 }
 
-main{
+.links-redes-esquerda {
+  position: absolute;
+  width: 348px;
+  height: 348px;
+  left: 40px;
+  top: 362px;
+}
+
+.tecnologias-esquerda {
+  position: absolute;
+  width: 348px;
+  height: 208px;
+  left: 40px;
+  top: 740px;
+}
+
+.experiencias-esquerda {
+  position: absolute;
+  width: 348px;
+  height: 349px;
+  left: 40px;
+  top: 978px;
+}
+
+.educacao-esquerda {
+  position: absolute;
+  width: 348px;
+  height: 352px;
+  left: 40px;
+  top: 1357px;
+}
+
+/*------COLUNAS DIREITA-----*/
+main {
   grid-area: main;
 }
 
-footer{
+.meus-projetos-direita {
+  position: absolute;
+  width: 952px;
+  height: 86px;
+  left: 448px;
+  top: 40px;
+}
+
+.principal-projetos-direita{
+  box-sizing: border-box;
+  display:inline;
+  
+}
+
+.projetos-recentes {
+  position: absolute;
+  width: 461px;
+  height: 186px;
+  left: 448px;
+  top: 157px;
+}
+
+.posts-recentes-direita {
+  position: absolute;
+  width: 952px;
+  height: 86px;
+  left: 448px;
+  top: 373px;
+}
+
+.postagem-direita {
+  position: absolute;
+  width: 952px;
+  height: 201px;
+  left: 448px;
+  top: 489px;
+}
+
+/*------RODAPE-----*/
+footer {
   grid-area: rodape;
 }
