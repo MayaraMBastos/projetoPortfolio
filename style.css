@@ -1,29 +1,53 @@
-:root {
-    --body-bg-color: #22212C;
-    --text-color: #837E9F;
-    --bg-cards: #302F3D;
-    --bg-techs: #CB92B1;
-  }
-
-  body{
-    background-color: var(--body-bg-color);
-  }
-    /*ir em novo terminal
-    mudar para git bash
-    comandos
-    git config --global user.name "Mayara Martinello Bastos"
-    git config --global user.email "maybastos2021@gmail.com"
-    git config -l
-
-    git init
-    git add .
-    git commit -m "Inicialização do projeto"
-    git branch -M main
-    git remote add origin https...
-    git push -u origin main
-
-cd desktop
+/*cd desktop
 copiar o code
 git clone endereço copiado
     */
-  
+
+:root {
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+}
+
+body {
+  margin: 0px;
+  background-color: var(--body-bg-color);
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.caixa-principal{
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  /*grid-template-rows: ;*/
+  grid-template-areas: "lateral main"
+                       "rodape rodape";
+}
+
+#caixa{
+  background-color: var(--bg-cards);
+  height: 200px;
+}
+
+aside{
+  margin-right: 40px;
+  grid-area: lateral;
+}
+
+.perfil-topo-esquerda {
+  position: absolute;
+  width: 348px;
+  height: 292px;
+  left: 40px;
+  top: 40px;
+}
+
+main{
+  grid-area: main;
+}
+
+footer{
+  grid-area: rodape;
+}
