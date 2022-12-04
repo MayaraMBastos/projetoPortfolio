@@ -26,7 +26,6 @@ body {
   background-color: var(--bg-cards);
   border-radius: 20px;
   margin: 20px;
-  
 }
 
 /*-----------------------------------Fontes------------------------------------*/
@@ -38,6 +37,14 @@ a {
   font-family: "Merriweather Sans", sans-serif;
   color: var(--text-color);
   text-decoration: none;
+}
+
+li {
+  font-family: "Merriweather Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
 }
 
 h1,
@@ -60,6 +67,22 @@ a {
   font-size: 13px;
   line-height: 16px;
 }
+
+.experiencias-li h3,.experiencias-li a{
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+}
+
+.experiencias-li p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0px;
+  padding-left: 15px;
+  }
 
 p {
   font-size: 14px;
@@ -128,6 +151,7 @@ aside {
 
 ul {
   list-style: none;
+  padding: 0px;
 }
 /*------------------------------------Perfil-----------------------------------*/
 .perfil-topo-esquerda {
@@ -135,7 +159,7 @@ ul {
   height: 300px;
 }
 
-img {
+#fotoPerfil {
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -206,8 +230,21 @@ img {
 /*-----------------------------------Experiencia-----------------------------------*/
 
 .experiencias-esquerda {
+  box-sizing: border-box;
   width: 350px;
-  height: 350px;
+  height: auto;
+  padding-top: 30px;
+}
+
+.div-ul-experiencias{
+  box-sizing: border-box;
+  display: block;
+  justify-content: left;
+  width: 100%;
+  padding: 0px 30px 30px 30px ;
+}
+.experiencias-li{
+  margin-bottom: 15px;
 }
 
 /*-----------------------------------Educação-----------------------------------*/
@@ -230,7 +267,7 @@ main {
   margin-right: 40px;
 }
 
-#card-direita{
+#card-direita {
   padding: 30px;
 }
 
