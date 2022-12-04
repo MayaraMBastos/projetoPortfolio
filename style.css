@@ -26,6 +26,7 @@ body {
   background-color: var(--bg-cards);
   border-radius: 20px;
   margin: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /*-----------------------------------Fontes------------------------------------*/
@@ -68,14 +69,14 @@ a {
   line-height: 16px;
 }
 
-.experiencias-li h3,.experiencias-li a{
+.experiencias-li h3,.experiencias-li a, .educacao-li h3,.educacao-li a{
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
 line-height: 18px;
 }
 
-.experiencias-li p{
+.experiencias-li p, .educacao-li p{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -167,6 +168,7 @@ ul {
 
 #fotoPerfil {
   border: 2px solid #00ff00;
+  
 }
 
 /*-----------------------------------Redes-----------------------------------*/
@@ -225,6 +227,7 @@ ul {
   height: 25px;
   background-color: var(--bg-techs);
   border-radius: 30px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /*-----------------------------------Experiencia-----------------------------------*/
@@ -250,10 +253,22 @@ ul {
 /*-----------------------------------Educação-----------------------------------*/
 
 .educacao-esquerda {
+  box-sizing: border-box;
   width: 350px;
-  height: 350px;
+  height: auto;
+  padding-top: 30px;
 }
 
+.div-ul-educacao{
+  box-sizing: border-box;
+  display: block;
+  justify-content: left;
+  width: 100%;
+  padding: 0px 30px 30px 30px ;
+}
+.educacao-li{
+  margin-bottom: 15px;
+}
 /*--------------------------COLUNAS DIREITA - Main -------------------------*/
 
 main {
