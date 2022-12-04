@@ -21,9 +21,11 @@ body {
 }
 
 #card {
+  box-sizing: border-box;
   background-color: var(--bg-cards);
   border-radius: 20px;
   margin: 20px;
+  padding: 30px;
   
   
 }
@@ -38,6 +40,7 @@ h1, h2, h3, p, a{
 h1,h2,h3{
 font-style: normal;
 font-weight: 700;
+margin: 5px;
 }
 
 p,a{
@@ -45,9 +48,16 @@ font-style: normal;
 font-weight: 400;
 }
 
+.redes-li a, .perfil-topo-esquerda p{
+font-weight: 300;
+font-size: 13px;
+line-height: 16px;
+}
+
 p{
   font-size: 14px;
 line-height: 20px;
+margin: 5px;
 }
 
 h1{
@@ -109,13 +119,13 @@ aside{
 }
 /*------Perfil-----*/
 .perfil-topo-esquerda {
-  width: 348px;
-  height: 292px;
+  width: 350px;
+  height: 300px;
   display: flex; /*Propriedade de container*/
     align-items: center; /*Alinha no eixo y, propriedade de alinhamento*/
     justify-content: center; /*Alinha no eixo x, space-around deixa espaços entre, propriedade de alinhamento*/
     flex-direction: column;
-    flex-wrap: wrap;
+   
   
 }
 
@@ -131,8 +141,8 @@ img{
 
 /*-----Redes-----*/
 .links-redes-esquerda {
-  width: 348px;
-  height: 348px;
+  width: 350px;
+  height: 350px;
   display: flex;
   align-items: center;
 }
@@ -155,20 +165,20 @@ height: 24px;
 }
 
 .tecnologias-esquerda {
-  width: 348px;
-  height: 208px;
+  width: 350px;
+  height: 210px;
 
 }
 
 .experiencias-esquerda {
-  width: 348px;
-  height: 349px;
+  width: 350px;
+  height: 350px;
 
 }
 
 .educacao-esquerda {
-  width: 348px;
-  height: 352px;
+  width: 350px;
+  height: 350px;
 ;
 }
 
@@ -198,24 +208,42 @@ main{
   gap: 20px;
 }*/
 
+/*-----Meus Projetos-----*/
 .meus-projetos-direita {
   grid-area: meusprojetos;
  
-
 }
 
+/*-----Cards projeto 1 e 2 -----*/
 .projetos-recentes1 {
   grid-area: projeto1;
-
-
 }
 
 .projetos-recentes2 {
   grid-area: projeto2;
- 
-
-
 }
+
+.git-img, .pasta-img{
+  width: 20px;
+  height: 20px;
+}
+
+.div-gitstatus, .star-branch, .gitLinguagem, .pasta-nome-projeto{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+border: #00FF00 solid 1px;
+}
+
+.div-gitstatus{
+  margin-top: 30px;
+}
+
+.gitLinguagem{
+  margin-left: 15px;
+}
+
+
 
 .posts-recentes-direita {
   grid-area: recente;
