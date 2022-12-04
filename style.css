@@ -76,12 +76,12 @@ font-size: 14px;
 line-height: 18px;
 }
 
-.experiencias-li p, .educacao-li p{
+.experiencias-li p, .educacao-li p, .postagem-li a, footer p{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  margin: 0px;
+  margin: 5px;
   padding-left: 15px;
   }
 
@@ -101,7 +101,7 @@ h2 {
   line-height: 25px;
 }
 
-h3 {
+h3, .textoPostagem p {
   font-size: 16px;
   line-height: 20px;
 }
@@ -160,7 +160,7 @@ ul {
   height: 300px;
 }
 
-#fotoPerfil {
+.fotoPerfil {
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -347,9 +347,29 @@ main {
 
 .postagem-direita {
   grid-area: post;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.postagem-ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.titulo-tempo-postagem{
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.fotoPostagem, .textoPostagem{
+  margin: 0px 20px 0px 20px;
 }
 
 /*-------------------------------RODAPE------------------------------*/
 footer {
+  text-align: center;
   grid-area: rodape;
+  
 }
