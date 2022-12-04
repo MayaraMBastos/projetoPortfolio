@@ -137,8 +137,8 @@ aside {
 }
 
 .caixa-lateral-esquerda {
+  /*border: solid 1px rgb(245, 26, 146);*/
   box-sizing: border-box;
-  border: solid 1px rgb(245, 26, 146);
   margin-left: 40px;
 }
 
@@ -277,8 +277,8 @@ main {
 }
 
 .caixa-main {
+  /*border: solid 1px rgb(72, 233, 8);*/
   box-sizing: border-box;
-  border: solid 1px rgb(72, 233, 8);
   margin-right: 40px;
 }
 
@@ -301,6 +301,23 @@ main {
 /*------------------------------Meus Projetos------------------------------*/
 .meus-projetos-direita {
   grid-area: meusprojetos;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
+}
+
+#verTodos{
+  text-align: right;
+}
+/*-------------------------Linha projetos -------------------------*/
+
+.caixa-projetos{
+  /*border: solid 1px pink;*/
+  display: flex; 
+align-items: center; 
+justify-content: center; 
+flex-direction: row;
 }
 
 /*-------------------------Cards projeto 1 e 2 -------------------------*/
@@ -323,10 +340,11 @@ main {
 .star-branch,
 .gitLinguagem,
 .pasta-nome-projeto {
+  /*border: #00ff00 solid 1px;*/
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: #00ff00 solid 1px;
+  
 }
 
 .div-gitstatus {
