@@ -5,7 +5,7 @@ git clone endereço copiado
 
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap");
 
-/*-----Cores------*/
+/*--------------------------------Cores e Estilo-------------------------------*/
 :root {
   --body-bg-color: #22212c;
   --text-color: #837e9f;
@@ -20,62 +20,67 @@ body {
   height: 100vh;
 }
 
-#card {
+#card-direita,
+#card-esquerda {
   box-sizing: border-box;
   background-color: var(--bg-cards);
   border-radius: 20px;
   margin: 20px;
-  padding: 30px;
-  
   
 }
 
-/*-----Fontes------*/
-h1, h2, h3, p, a{
+/*-----------------------------------Fontes------------------------------------*/
+h1,
+h2,
+h3,
+p,
+a {
   font-family: "Merriweather Sans", sans-serif;
   color: var(--text-color);
   text-decoration: none;
 }
 
-h1,h2,h3{
-font-style: normal;
-font-weight: 700;
-margin: 5px;
+h1,
+h2,
+h3 {
+  font-style: normal;
+  font-weight: 700;
+  margin: 5px;
 }
 
-p,a{
-font-style: normal;
-font-weight: 400;
+p,
+a {
+  font-style: normal;
+  font-weight: 400;
 }
 
-.redes-li a, .perfil-topo-esquerda p{
-font-weight: 300;
-font-size: 13px;
-line-height: 16px;
+.redes-li a,
+.perfil-topo-esquerda p {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
 }
 
-p{
+p {
   font-size: 14px;
-line-height: 20px;
-margin: 5px;
+  line-height: 20px;
+  margin: 5px;
 }
 
-h1{
+h1 {
   font-size: 23px;
-line-height: 29px;
+  line-height: 29px;
 }
 
-h2{
+h2 {
   font-size: 20px;
-line-height: 25px;
+  line-height: 25px;
 }
 
-h3{
+h3 {
   font-size: 16px;
-line-height: 20px;
+  line-height: 20px;
 }
-
-
 
 /*.caixa-principal {
   border: solid 1px orangered;
@@ -89,23 +94,20 @@ line-height: 20px;
   "rodape rodape rodape rodape rodape rodape";
 }*/
 
-/*----- body grid-----*/
+/*----------------------------------- body grid-----------------------------------*/
 body {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 450px 1fr;
   grid-template-areas:
-  "lateral  main"
-  "rodape rodape";
+    "lateral  main"
+    "rodape rodape";
   gap: 20px;
-
 }
 
+/*------------------------------------LATERAL-----------------------------------*/
 
-
-/*------LATERAL-----*/
-
-aside{
+aside {
   grid-area: lateral;
   box-sizing: border-box;
 }
@@ -114,32 +116,36 @@ aside{
   box-sizing: border-box;
   border: solid 1px rgb(245, 26, 146);
   margin-left: 40px;
-  
-  
 }
-/*------Perfil-----*/
+
+#card-esquerda {
+  box-sizing: border-box;
+  display: flex; /*Propriedade de container*/
+  align-items: center; /*Alinha no eixo y, propriedade de alinhamento*/
+  justify-content: center; /*Alinha no eixo x, space-around deixa espaços entre, propriedade de alinhamento*/
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+/*------------------------------------Perfil-----------------------------------*/
 .perfil-topo-esquerda {
   width: 350px;
   height: 300px;
-  display: flex; /*Propriedade de container*/
-    align-items: center; /*Alinha no eixo y, propriedade de alinhamento*/
-    justify-content: center; /*Alinha no eixo x, space-around deixa espaços entre, propriedade de alinhamento*/
-    flex-direction: column;
-   
-  
 }
 
-img{
+img {
   width: 130px;
   height: 130px;
   border-radius: 50%;
 }
 
-#fotoPerfil{
-  border: 2px solid #00FF00;
+#fotoPerfil {
+  border: 2px solid #00ff00;
 }
 
-/*-----Redes-----*/
+/*-----------------------------------Redes-----------------------------------*/
 .links-redes-esquerda {
   width: 350px;
   height: 350px;
@@ -147,44 +153,73 @@ img{
   align-items: center;
 }
 
-.redes-ul{
-  list-style: none;
+.redes-ul {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.redes-li{
+.redes-li {
   display: flex;
   align-items: center;
   padding: 10px;
 }
 
-.redes-img{
+.redes-img {
   padding-right: 20px;
   width: 24px;
-height: 24px;
+  height: 24px;
 }
+
+/*-----------------------------------Tecnologias-----------------------------------*/
 
 .tecnologias-esquerda {
+  box-sizing: border-box;
   width: 350px;
   height: 210px;
-
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
+
+.tecnologias-ul {
+  display: flex; /*Propriedade de container*/
+  align-items: center; /*Alinha no eixo y, propriedade de alinhamento*/
+  justify-content: center; /*Alinha no eixo x, space-around deixa espaços entre, propriedade de alinhamento*/
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tecnologias-li {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  width: 85px;
+  height: 25px;
+  background-color: var(--bg-techs);
+  border-radius: 30px;
+}
+
+/*-----------------------------------Experiencia-----------------------------------*/
 
 .experiencias-esquerda {
   width: 350px;
   height: 350px;
-
 }
+
+/*-----------------------------------Educação-----------------------------------*/
 
 .educacao-esquerda {
   width: 350px;
   height: 350px;
-;
 }
 
-/*------COLUNAS DIREITA-----*/
+/*--------------------------COLUNAS DIREITA - Main -------------------------*/
 
-main{
+main {
   grid-area: main;
   box-sizing: border-box;
 }
@@ -192,8 +227,11 @@ main{
 .caixa-main {
   box-sizing: border-box;
   border: solid 1px rgb(72, 233, 8);
- margin-right: 40px;
+  margin-right: 40px;
+}
 
+#card-direita{
+  padding: 30px;
 }
 
 /*.caixa-main{
@@ -208,13 +246,12 @@ main{
   gap: 20px;
 }*/
 
-/*-----Meus Projetos-----*/
+/*------------------------------Meus Projetos------------------------------*/
 .meus-projetos-direita {
   grid-area: meusprojetos;
- 
 }
 
-/*-----Cards projeto 1 e 2 -----*/
+/*-------------------------Cards projeto 1 e 2 -------------------------*/
 .projetos-recentes1 {
   grid-area: projeto1;
 }
@@ -223,43 +260,44 @@ main{
   grid-area: projeto2;
 }
 
-.git-img, .pasta-img{
+.git-img,
+.pasta-img {
   width: 20px;
   height: 20px;
+  margin-right: 15px;
 }
 
-.div-gitstatus, .star-branch, .gitLinguagem, .pasta-nome-projeto{
+.div-gitstatus,
+.star-branch,
+.gitLinguagem,
+.pasta-nome-projeto {
   display: flex;
   flex-direction: row;
   align-items: center;
-border: #00FF00 solid 1px;
+  border: #00ff00 solid 1px;
 }
 
-.div-gitstatus{
+.div-gitstatus {
   margin-top: 30px;
 }
 
-.gitLinguagem{
+.gitLinguagem {
   margin-left: 15px;
 }
 
-
+/*--------------------------Postagens Recentes--------------------------*/
 
 .posts-recentes-direita {
   grid-area: recente;
-
-
 }
+
+/*-------------------------------Postagem-------------------------------*/
 
 .postagem-direita {
   grid-area: post;
-
- 
-
-
 }
 
-/*------RODAPE-----*/
+/*-------------------------------RODAPE------------------------------*/
 footer {
   grid-area: rodape;
 }
