@@ -1,34 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Portfólio</title>
-</head>
-<body>
-    <div class="caixa-principal">
-        <header></header>
-        <aside class="coluna-lateral-esquerda">
-            <div class="perfil-topo-esquerda" id="caixa" ></div>
-            <div class="links-redes-esquerda" id="caixa" ></div>
-            <div class="tecnologias-esquerda" id="caixa" ></div>
-            <div class="experiencias-esquerda" id="caixa" ></div>
-            <div class="educacao-esquerda" id="caixa" ></div>
-        </aside>
-        <main class="colunas-meio-direita">
-            <div class="meus-projetos-direita" id="caixa" ></div>
-            <div class="principal-projetos-direita">
-                <div class="projetos-recentes" id="caixa" ></div>
-                <div class="projetos-recentes" id="caixa" ></div>
-            </div>
-            <div class="posts-recentes-direita" id="caixa" ></div>
-            <div class="postagem-direita" id="caixa" ></div>
+  </head>
+  <body>
+    <main class="caixa-principal">
+      <div class="caixa-main">
+        <div class="meus-projetos-direita" id="card">
+          <h2>
+            <a href="">Meus Projetos</a>
+          </h2>
+        </div>
+        <div class="projetos-recentes1" id="card">
+          <h3>
+            <a href="">nome-projeto</a>
+          </h3>
+        </div>
+        <div class="projetos-recentes2" id="card">
+          <h3>
+            <a href="">nome-projeto</a>
+          </h3>
+        </div>
+        <div class="posts-recentes-direita" id="card">
+          <h2>
+            <a href="">Postagens Recentes</a>
+          </h2>
+        </div>
+        <div class="postagem-direita" id="card">
+          <h2>
+            <a href="">Titulo da postagem</a>
+          </h2>
+        </div>
+      </div>
+    </main>
 
-        </main>
-        <footer class="rodape"></footer>
-
-    </div>
-</body>
+    <aside>
+      <div class="caixa-lateral-esquerda">
+        <div class="perfil-topo-esquerda" id="card">
+          <img
+            src="./imagens/lontra.jpg"
+            alt="Foto do perfil"
+            id="fotoPerfil"
+          /> <br>
+          <h1>
+            <a href="">Mayara Martinello Bastos</a>
+          </h1><br>
+          <p>Estudante</p>
+        </div>
+        <div class="links-redes-esquerda" id="card">
+          <ul class="redes-ul">
+            <li class="redes-li">
+              <img class="redes-img" src="./assets/map-pin.svg"/>
+              <a href="">Brasil</a>
+            </li>
+            <li class="redes-li">
+                <img class="redes-img" src="./assets/briefcase.svg"/>
+                <a href="">Secretária de Educação</a>
+            </li>
+            <li class="redes-li">
+                <img class="redes-img" src="./assets/github.svg"/>
+              <a href="">MayaraMBastos</a>
+            </li>
+            <li class="redes-li">
+                <img class="redes-img" src="./assets/linkedin.svg"/>
+              <a href="">Mayara Martinello Bastos</a>
+            </li>
+            <li class="redes-li">
+                <img class="redes-img"  src=".//assets/twitter.svg"/>
+              <a href="">May MB</a>
+            </li>
+            <li class="redes-li">
+                <img class="redes-img" src="./assets/globe.svg"/>
+              <a href="">https://birobirobiro.dev</a>
+            </li>
+            <li class="redes-li">
+                <img class="redes-img" src="./assets/mail.svg"/>
+              <a href="">maybastos2021@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tecnologias-esquerda" id="card"></div>
+        <div class="experiencias-esquerda" id="card"></div>
+        <div class="educacao-esquerda" id="card"></div>
+      </div>
+    </aside>
+    <footer class="rodape"></footer>
+  </body>
 </html>
