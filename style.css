@@ -14,7 +14,8 @@ git clone endereço copiado
 }
 
 body {
-  margin: 0px;
+  box-sizing: border-box;
+  margin: 40px;
   background-color: var(--body-bg-color);
   width: 100vw;
   height: 100vh;
@@ -126,7 +127,6 @@ body {
   grid-template-areas:
     "lateral  main"
     "rodape rodape";
-  gap: 20px;
 }
 
 /*------------------------------------LATERAL-----------------------------------*/
@@ -136,19 +136,15 @@ aside {
   box-sizing: border-box;
 }
 
-.caixa-lateral-esquerda {
+.caixa-lateral-esquerda, #card-esquerda {
   /*border: solid 1px rgb(245, 26, 146);*/
-  box-sizing: border-box;
-  margin-left: 40px;
-}
-
-#card-esquerda {
   box-sizing: border-box;
   display: flex; /*Propriedade de container*/
   align-items: center; /*Alinha no eixo y, propriedade de alinhamento*/
   justify-content: center; /*Alinha no eixo x, space-around deixa espaços entre, propriedade de alinhamento*/
   flex-direction: column;
 }
+
 
 ul {
   list-style: none;
@@ -273,6 +269,7 @@ ul {
 
 main {
   grid-area: main;
+  width: 900px;
   box-sizing: border-box;
 }
 
@@ -345,6 +342,14 @@ flex-direction: row;
   flex-direction: row;
   align-items: center;
   
+}
+
+.gitLinguagem{
+ justify-content: right;
+}
+
+#ProjetoLag{
+  text-align: right;
 }
 
 .div-gitstatus {
