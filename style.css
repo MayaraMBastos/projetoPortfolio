@@ -122,7 +122,7 @@ h3,
   line-height: 20px;
 }
 
-/*-------------------------------------Tempalte grid-------------------------------------*/
+/*-------------------------------------Template grid-------------------------------------*/
 .principal {
   display: grid;
   grid-template-columns: 33vw 66vw;
@@ -146,9 +146,9 @@ aside {
 .caixa-lateral-esquerda,
 #card-esquerda {
   box-sizing: border-box;
-  display: flex; /*Propriedade de container*/
-  align-items: center; /*Alinha no eixo y, propriedade de alinhamento*/
-  justify-content: center; /*Alinha no eixo x, space-around deixa espaços entre, propriedade de alinhamento*/
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   flex-direction: column;
   margin: 5%;
 }
