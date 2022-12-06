@@ -1,13 +1,3 @@
-/*cd desktop
-copiar o code
-git clone endereço copiado
-
-organizar conforme aparecem no html
-deixar responsivo proporçoes e vw hw
-    */
-
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap");
-
 /*--------------------------------Cores e Estilo-------------------------------*/
 :root {
   --body-bg-color: #22212c;
@@ -26,7 +16,9 @@ html {
 }
 
 #card-direita,
-#card-esquerda, .projetos-recentes1, .projetos-recentes2 {
+#card-esquerda,
+.projetos-recentes1,
+.projetos-recentes2 {
   background-color: var(--bg-cards);
   border-radius: 20px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -38,7 +30,10 @@ html {
   padding: 3.5%;
 }
 
-/*-----------------------------------Fontes------------------------------------*/
+/*-----------------------------------Fontes e Links ------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap");
+
 h1,
 h2,
 h3,
@@ -127,9 +122,8 @@ h3,
   line-height: 20px;
 }
 
-/*----------------------------------- grid-----------------------------------*/
+/*-------------------------------------Tempalte grid-------------------------------------*/
 .principal {
-  border: solid 1px rgb(47, 0, 255);
   display: grid;
   grid-template-columns: 33vw 66vw;
   grid-template-areas:
@@ -140,10 +134,9 @@ h3,
   margin: 0px;
 }
 
-/*------------------------------------LATERAL-----------------------------------*/
+/*------------------------------------LATERAL ESQUERDA-----------------------------------*/
 
 aside {
-  border: solid 2px orangered;
   grid-area: lateral;
   box-sizing: border-box;
   width: 33vw;
@@ -152,26 +145,25 @@ aside {
 
 .caixa-lateral-esquerda,
 #card-esquerda {
-  /*border: solid 1px rgb(245, 26, 146);*/
   box-sizing: border-box;
   display: flex; /*Propriedade de container*/
   align-items: center; /*Alinha no eixo y, propriedade de alinhamento*/
   justify-content: center; /*Alinha no eixo x, space-around deixa espaços entre, propriedade de alinhamento*/
   flex-direction: column;
+  margin: 5%;
 }
 
 ul {
   list-style: none;
   padding: 0px;
 }
-/*------------------------------------Perfil-----------------------------------*/
+/*----------------------------------------Card Perfil---------------------------------------*/
 .perfil-topo-esquerda {
   width: 25vw;
   height: 30vh;
   min-width: 295px;
   min-height: 340px;
 }
-
 
 .fotoPerfil {
   width: 130px;
@@ -185,12 +177,12 @@ ul {
   border: 2px solid #00ff00;
 }
 
-/*-----------------------------------Redes-----------------------------------*/
+/*-----------------------------------------Card Redes-----------------------------------------*/
 .links-redes-esquerda {
   width: 25vw;
   height: 55vh;
   min-width: 295px;
-  min-height: 350px;
+  min-height: 360px;
 }
 
 .redes-ul {
@@ -199,7 +191,7 @@ ul {
 .redes-li {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 4.5%;
 }
 
 .redes-img {
@@ -208,7 +200,7 @@ ul {
   height: 24px;
 }
 
-/*-----------------------------------Tecnologias-----------------------------------*/
+/*-----------------------------------Card Tecnologias-----------------------------------*/
 
 .tecnologias-esquerda {
   box-sizing: border-box;
@@ -220,9 +212,9 @@ ul {
 }
 
 .tecnologias-ul {
-  display: flex; /*Propriedade de container*/
-  align-items: center; /*Alinha no eixo y, propriedade de alinhamento*/
-  justify-content: center; /*Alinha no eixo x, space-around deixa espaços entre, propriedade de alinhamento*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -235,7 +227,7 @@ ul {
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin: 5px;
+  margin: 2%;
   width: 85px;
   height: 25px;
   background-color: var(--bg-techs);
@@ -243,7 +235,7 @@ ul {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-/*-----------------------------------Experiencia-----------------------------------*/
+/*-----------------------------------card Experiencia-----------------------------------*/
 
 .experiencias-esquerda {
   box-sizing: border-box;
@@ -269,7 +261,7 @@ ul {
   margin-bottom: 6%;
 }
 
-/*-----------------------------------Educação-----------------------------------*/
+/*-----------------------------------card Educação-----------------------------------*/
 
 .educacao-esquerda {
   box-sizing: border-box;
@@ -296,7 +288,6 @@ ul {
 /*--------------------------COLUNAS DIREITA - Main -------------------------*/
 
 main {
-  border: solid 2px rgb(72, 233, 8);
   box-sizing: border-box;
   grid-area: main;
   width: 66vw;
@@ -304,13 +295,11 @@ main {
 }
 
 .caixa-main {
-  /*border: solid 1px rgb(8, 151, 233);*/
   box-sizing: border-box;
-
   min-width: 600px;
 }
 
-/*------------------------------Meus Projetos------------------------------*/
+/*------------------------------Card Meus Projetos------------------------------*/
 .meus-projetos-direita {
   grid-area: meusprojetos;
   display: flex;
@@ -326,38 +315,35 @@ main {
 #verTodos {
   text-align: right;
 }
-/*-------------------------Linha projetos -------------------------*/
+/*-------------------------------Div Projetos Recentes -------------------------------*/
 
 .caixa-projetos {
-  /*border: solid 1px pink;*/
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  width: 60vw;
+  height: 30vh;
+  min-width: 600px;
   padding: 0% 5%;
   margin: 0px;
 }
 
-/*-------------------------Cards projeto 1 e 2 -------------------------*/
+/*-------------------------------Cards projetos recentes -------------------------------*/
 .projetos-recentes1 {
   grid-area: projeto1;
-  border: solid 1px rgb(8, 151, 233);
   width: 50vw;
   min-width: 250px;
   padding: 5%;
   margin-right: 3%;
-  
 }
 
 .projetos-recentes2 {
-  border: solid 1px rgb(233, 8, 147);
   grid-area: projeto2;
   width: 50vw;
   min-width: 250px;
   padding: 5%;
   margin-left: 3%;
-  
-  
 }
 
 .git-img,
@@ -371,7 +357,6 @@ main {
 .star-branch,
 .gitLinguagem,
 .pasta-nome-projeto {
-  /*border: #00ff00 solid 1px;*/
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -386,14 +371,14 @@ main {
 }
 
 .div-gitstatus {
-  margin-top: 30px;
+  margin-top: 10%;
 }
 
 .gitLinguagem {
-  margin-left: 15px;
+  margin-left: 6%;
 }
 
-/*--------------------------Postagens Recentes--------------------------*/
+/*--------------------------Card Postagens Recentes--------------------------*/
 
 .posts-recentes-direita {
   grid-area: recente;
@@ -403,7 +388,7 @@ main {
   min-height: 30px;
 }
 
-/*-------------------------------Postagem-------------------------------*/
+/*-------------------------------Card Postagem-------------------------------*/
 
 .postagem-direita {
   grid-area: post;
@@ -424,15 +409,15 @@ main {
 }
 .titulo-tempo-postagem {
   text-align: center;
-  padding: 10px 0px 10px 0px;
+  padding: 2.5% 0% 2.5% 0%;
 }
 
 .fotoPostagem,
 .textoPostagem {
-  margin: 0px 20px 0px 20px;
+  margin: 0% 4%;
 }
 
-/*-------------------------------RODAPE------------------------------*/
+/*-------------------------------------RODAPE------------------------------------*/
 footer {
   text-align: center;
   grid-area: rodape;
