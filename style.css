@@ -1,6 +1,9 @@
 /*cd desktop
 copiar o code
 git clone endereço copiado
+
+organizar conforme aparecem no html
+deixar responsivo proporçoes e vw hw
     */
 
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap");
@@ -13,20 +16,22 @@ git clone endereço copiado
   --bg-techs: #cb92b1;
 }
 
-body {
+body,
+html {
   box-sizing: border-box;
-  margin: 40px;
   background-color: var(--body-bg-color);
   width: 100vw;
   height: 100vh;
+  margin: 0px;
 }
 
 #card-direita,
 #card-esquerda {
-  box-sizing: border-box;
+ 
   background-color: var(--bg-cards);
   border-radius: 20px;
-  margin: 20px;
+  margin: 5%; /*20px*/
+  padding: 3.5%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -70,21 +75,32 @@ a {
   line-height: 16px;
 }
 
-.experiencias-li h3,.experiencias-li a, .educacao-li h3,.educacao-li a{
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 18px;
+.experiencias-li h3,
+.experiencias-li a,
+.educacao-li h3,
+.educacao-li a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
 }
 
-.experiencias-li p, .educacao-li p, .postagem-li a, footer p{
+.tecnologias-li a {
+  font-weight: 700;
+  color: black;
+}
+
+.experiencias-li p,
+.educacao-li p,
+.postagem-li a,
+footer p {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   margin: 5px;
   padding-left: 15px;
-  }
+}
 
 p {
   font-size: 14px;
@@ -102,31 +118,26 @@ h2 {
   line-height: 25px;
 }
 
-h3, .textoPostagem p {
+h3,
+.textoPostagem p {
   font-size: 16px;
   line-height: 20px;
 }
 
-/*.caixa-principal {
-  border: solid 1px orangered;
-  display: grid;
-  grid-template-columns: 450px 1fr 1fr;
-  grid-template-areas:
-  "lateral meusprojetos meusprojetos meusprojetos meusprojetos meusprojetos"
-  "lateral projeto1 projeto1 projeto1 projeto2 projeto2"
-  "lateral recente recente recente recente recente"
-  "lateral post post post post post"
-  "rodape rodape rodape rodape rodape rodape";
-}*/
-
 /*----------------------------------- body grid-----------------------------------*/
 body {
-  box-sizing: border-box;
   display: grid;
-  grid-template-columns: 450px 1fr;
+  grid-template-columns: 33% 1fr;
   grid-template-areas:
     "lateral  main"
     "rodape rodape";
+}
+
+.principal{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
 }
 
 /*------------------------------------LATERAL-----------------------------------*/
@@ -134,9 +145,13 @@ body {
 aside {
   grid-area: lateral;
   box-sizing: border-box;
+  width: 30vw;
+  min-width: 295px;
+  
 }
 
-.caixa-lateral-esquerda, #card-esquerda {
+.caixa-lateral-esquerda,
+#card-esquerda {
   /*border: solid 1px rgb(245, 26, 146);*/
   box-sizing: border-box;
   display: flex; /*Propriedade de container*/
@@ -145,39 +160,38 @@ aside {
   flex-direction: column;
 }
 
-
 ul {
   list-style: none;
   padding: 0px;
 }
 /*------------------------------------Perfil-----------------------------------*/
 .perfil-topo-esquerda {
-  width: 350px;
-  height: 300px;
+  width: 25vw;
+  height: 30vh;
+  min-width: 295px;
+  min-height: 340px;
 }
 
 .fotoPerfil {
-  width: 130px;
+  width: 130px; /*fazer proporção*/
   height: 130px;
   border-radius: 50%;
 }
 
 #fotoPerfil {
   border: 2px solid #00ff00;
-  
 }
 
 /*-----------------------------------Redes-----------------------------------*/
 .links-redes-esquerda {
-  width: 350px;
-  height: 350px;
-  display: flex;
-  align-items: center;
+  width: 25vw;
+  height: 55vh;
+  min-width: 295px;
+  min-height: 350px;
 }
 
 .redes-ul {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin: 0px;
 }
 .redes-li {
   display: flex;
@@ -195,10 +209,11 @@ ul {
 
 .tecnologias-esquerda {
   box-sizing: border-box;
-  width: 350px;
-  height: 210px;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  width: 25vw;
+  height: 30vh;
+  min-width: 295px;
+  min-height: 250px;
+  padding: 8% 0% 5% 0%;
 }
 
 .tecnologias-ul {
@@ -217,8 +232,7 @@ ul {
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin-bottom: 15px;
-  margin-right: 15px;
+  margin: 5px;
   width: 85px;
   height: 25px;
   background-color: var(--bg-techs);
@@ -230,100 +244,110 @@ ul {
 
 .experiencias-esquerda {
   box-sizing: border-box;
-  width: 350px;
-  height: auto;
-  padding-top: 30px;
+  width: 25vw;
+  height: 60vh;
+  min-width: 295px;
+  min-height: 450px;
+  
 }
 
-.div-ul-experiencias{
+.div-ul-experiencias {
   box-sizing: border-box;
-  display: block;
-  justify-content: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 0px 30px 30px 30px ;
 }
-.experiencias-li{
-  margin-bottom: 15px;
+
+.experiencias-ul{
+  margin: 6% 0% 6% 0%;
+}
+
+.experiencias-li {
+  margin-bottom: 6%;
 }
 
 /*-----------------------------------Educação-----------------------------------*/
 
 .educacao-esquerda {
   box-sizing: border-box;
-  width: 350px;
-  height: auto;
-  padding-top: 30px;
+  width: 25vw;
+  height: 60vh;
+  min-width: 295px;
+  min-height: 450px;
+
 }
 
-.div-ul-educacao{
+.div-ul-educacao {
   box-sizing: border-box;
-  display: block;
-  justify-content: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 0px 30px 30px 30px ;
 }
-.educacao-li{
-  margin-bottom: 15px;
+
+.educacao-ul{
+  margin: 6% 0% 6% 0%;
+}
+.educacao-li {
+  margin-bottom: 6%;
 }
 /*--------------------------COLUNAS DIREITA - Main -------------------------*/
 
 main {
-  grid-area: main;
-  width: 900px;
+  border: solid 1px rgb(72, 233, 8);
   box-sizing: border-box;
+  grid-area: main;
+
+  min-width: 600px;
+  
 }
 
 .caixa-main {
-  /*border: solid 1px rgb(72, 233, 8);*/
+  border: solid 1px rgb(8, 151, 233);
   box-sizing: border-box;
-  margin-right: 40px;
+
+  min-width: 600px;
 }
 
-#card-direita {
-  padding: 30px;
-}
 
-/*.caixa-main{
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-  "meusprojetos meusprojetos meusprojetos meusprojetos meusprojetos"
-  "projeto1 projeto1 projeto1 projeto2 projeto2"
-  "recente recente recente recente recente"
-  "post post post post post";
-  gap: 20px;
-}*/
 
 /*------------------------------Meus Projetos------------------------------*/
 .meus-projetos-direita {
   grid-area: meusprojetos;
   display: flex;
   flex-direction: row;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
+
 }
 
-#verTodos{
+#verTodos {
   text-align: right;
 }
 /*-------------------------Linha projetos -------------------------*/
 
-.caixa-projetos{
+.caixa-projetos {
   /*border: solid 1px pink;*/
-  display: flex; 
-align-items: center; 
-justify-content: center; 
-flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+ 
 }
 
 /*-------------------------Cards projeto 1 e 2 -------------------------*/
 .projetos-recentes1 {
   grid-area: projeto1;
+  border: solid 1px rgb(8, 151, 233);
+  width: 25vw;
 }
 
 .projetos-recentes2 {
+  border: solid 1px rgb(233, 8, 147);
   grid-area: projeto2;
+ 
+  width: 25vw;
 }
 
 .git-img,
@@ -341,14 +365,13 @@ flex-direction: row;
   display: flex;
   flex-direction: row;
   align-items: center;
-  
 }
 
-.gitLinguagem{
- justify-content: right;
+.gitLinguagem {
+  justify-content: right;
 }
 
-#ProjetoLag{
+#ProjetoLag {
   text-align: right;
 }
 
@@ -376,17 +399,18 @@ flex-direction: row;
   justify-content: center;
 }
 
-.postagem-ul{
+.postagem-ul {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.titulo-tempo-postagem{
+.titulo-tempo-postagem {
   text-align: center;
   padding: 10px 0px 10px 0px;
 }
 
-.fotoPostagem, .textoPostagem{
+.fotoPostagem,
+.textoPostagem {
   margin: 0px 20px 0px 20px;
 }
 
@@ -394,5 +418,4 @@ flex-direction: row;
 footer {
   text-align: center;
   grid-area: rodape;
-  
 }
