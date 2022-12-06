@@ -124,28 +124,29 @@ h3,
   line-height: 20px;
 }
 
-/*----------------------------------- body grid-----------------------------------*/
-body {
+/*----------------------------------- grid-----------------------------------*/
+.principal {
   display: grid;
-  grid-template-columns: 33% 1fr;
+  grid-template-columns: 33vw 66vw;
   grid-template-areas:
     "lateral  main"
     "rodape rodape";
 }
 
 .principal{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: row;
+border: solid 1px yellow;
+width: 100vw;
+height: 100vh;
+margin: 0px;
 }
 
 /*------------------------------------LATERAL-----------------------------------*/
 
 aside {
+ /* border: solid 1px orangered;*/
   grid-area: lateral;
   box-sizing: border-box;
-  width: 30vw;
+  width: 33vw;
   min-width: 295px;
   
 }
@@ -298,7 +299,7 @@ main {
   border: solid 1px rgb(72, 233, 8);
   box-sizing: border-box;
   grid-area: main;
-
+  width: 66vw;
   min-width: 600px;
   
 }
