@@ -26,13 +26,16 @@ html {
 }
 
 #card-direita,
-#card-esquerda {
- 
+#card-esquerda, .projetos-recentes1, .projetos-recentes2 {
   background-color: var(--bg-cards);
   border-radius: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#card-direita,
+#card-esquerda {
   margin: 5%; /*20px*/
   padding: 3.5%;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /*-----------------------------------Fontes------------------------------------*/
@@ -126,29 +129,25 @@ h3,
 
 /*----------------------------------- grid-----------------------------------*/
 .principal {
+  border: solid 1px rgb(47, 0, 255);
   display: grid;
   grid-template-columns: 33vw 66vw;
   grid-template-areas:
     "lateral  main"
     "rodape rodape";
-}
-
-.principal{
-border: solid 1px yellow;
-width: 100vw;
-height: 100vh;
-margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
 }
 
 /*------------------------------------LATERAL-----------------------------------*/
 
 aside {
- /* border: solid 1px orangered;*/
+  border: solid 2px orangered;
   grid-area: lateral;
   box-sizing: border-box;
   width: 33vw;
   min-width: 295px;
-  
 }
 
 .caixa-lateral-esquerda,
@@ -173,9 +172,12 @@ ul {
   min-height: 340px;
 }
 
+
 .fotoPerfil {
-  width: 130px; /*fazer proporção*/
+  width: 130px;
   height: 130px;
+  min-width: 100px;
+  min-height: 100px;
   border-radius: 50%;
 }
 
@@ -249,7 +251,6 @@ ul {
   height: 60vh;
   min-width: 295px;
   min-height: 450px;
-  
 }
 
 .div-ul-experiencias {
@@ -260,7 +261,7 @@ ul {
   width: 100%;
 }
 
-.experiencias-ul{
+.experiencias-ul {
   margin: 6% 0% 6% 0%;
 }
 
@@ -276,7 +277,6 @@ ul {
   height: 60vh;
   min-width: 295px;
   min-height: 450px;
-
 }
 
 .div-ul-educacao {
@@ -287,7 +287,7 @@ ul {
   width: 100%;
 }
 
-.educacao-ul{
+.educacao-ul {
   margin: 6% 0% 6% 0%;
 }
 .educacao-li {
@@ -296,22 +296,19 @@ ul {
 /*--------------------------COLUNAS DIREITA - Main -------------------------*/
 
 main {
-  border: solid 1px rgb(72, 233, 8);
+  border: solid 2px rgb(72, 233, 8);
   box-sizing: border-box;
   grid-area: main;
   width: 66vw;
   min-width: 600px;
-  
 }
 
 .caixa-main {
-  border: solid 1px rgb(8, 151, 233);
+  /*border: solid 1px rgb(8, 151, 233);*/
   box-sizing: border-box;
 
   min-width: 600px;
 }
-
-
 
 /*------------------------------Meus Projetos------------------------------*/
 .meus-projetos-direita {
@@ -320,7 +317,10 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
+  width: 55vw;
+  height: 5vh;
+  min-width: 600px;
+  min-height: 30px;
 }
 
 #verTodos {
@@ -334,21 +334,30 @@ main {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
- 
+  padding: 0% 5%;
+  margin: 0px;
 }
 
 /*-------------------------Cards projeto 1 e 2 -------------------------*/
 .projetos-recentes1 {
   grid-area: projeto1;
   border: solid 1px rgb(8, 151, 233);
-  width: 25vw;
+  width: 50vw;
+  min-width: 250px;
+  padding: 5%;
+  margin-right: 3%;
+  
 }
 
 .projetos-recentes2 {
   border: solid 1px rgb(233, 8, 147);
   grid-area: projeto2;
- 
-  width: 25vw;
+  width: 50vw;
+  min-width: 250px;
+  padding: 5%;
+  margin-left: 3%;
+  
+  
 }
 
 .git-img,
@@ -388,6 +397,10 @@ main {
 
 .posts-recentes-direita {
   grid-area: recente;
+  width: 55vw;
+  height: 5vh;
+  min-width: 600px;
+  min-height: 30px;
 }
 
 /*-------------------------------Postagem-------------------------------*/
@@ -398,6 +411,10 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 55vw;
+  height: 5vh;
+  min-width: 600px;
+  min-height: 150px;
 }
 
 .postagem-ul {
