@@ -206,6 +206,8 @@ ul {
 }
 
 .redes-ul {
+  width: 16vw;
+  min-width: 200px;
   margin: 0px;
 }
 .redes-li {
