@@ -16,7 +16,7 @@ html {
 }
 
 #card-direita,
-#card-esquerda,
+#card-esquerda, #card-foto,
 .projetos-recentes1,
 .projetos-recentes2 {
   background-color: var(--bg-cards);
@@ -26,7 +26,14 @@ html {
 
 #card-direita,
 #card-esquerda {
-  margin: 5%; /*20px*/
+  margin: 5% 0% 5% 0%; /*20px*/ 
+}
+
+.caixa-lateral-esquerda #card-esquerda{
+  padding: 5%
+}
+
+.caixa-main #card-direita{
   padding: 3.5%;
 }
 
@@ -125,7 +132,7 @@ h3,
 /*-------------------------------------Template grid-------------------------------------*/
 .principal {
   display: grid;
-  grid-template-columns: 33vw 66vw;
+  grid-template-columns: 34vw 66vw;
   grid-template-areas:
     "lateral  main"
     "rodape rodape";
@@ -139,18 +146,21 @@ h3,
 aside {
   grid-area: lateral;
   box-sizing: border-box;
-  width: 33vw;
+  width: 34vw;
   min-width: 295px;
 }
 
 .caixa-lateral-esquerda,
 #card-esquerda {
   box-sizing: border-box;
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  flex-direction: column;
   margin: 5%;
+}
+
+.caixa-lateral-esquerda{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {
@@ -159,6 +169,10 @@ ul {
 }
 /*----------------------------------------Card Perfil---------------------------------------*/
 .perfil-topo-esquerda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 25vw;
   height: 30vh;
   min-width: 295px;
@@ -177,12 +191,18 @@ ul {
   border: 2px solid #00ff00;
 }
 
+#card-foto{
+  margin: 5%;
+}
+
 /*-----------------------------------------Card Redes-----------------------------------------*/
 .links-redes-esquerda {
   width: 25vw;
   height: 55vh;
   min-width: 295px;
   min-height: 360px;
+  display: flex;
+    align-items: center;
 }
 
 .redes-ul {
@@ -325,7 +345,6 @@ main {
   width: 60vw;
   height: 30vh;
   min-width: 600px;
-  padding: 0% 5%;
   margin: 0px;
 }
 
@@ -408,7 +427,6 @@ main {
   align-items: center;
 }
 .titulo-tempo-postagem {
-  text-align: center;
   padding: 2.5% 0% 2.5% 0%;
 }
 
