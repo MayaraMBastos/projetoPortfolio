@@ -16,7 +16,8 @@ html {
 }
 
 #card-direita,
-#card-esquerda, #card-foto,
+#card-esquerda,
+#card-foto,
 .projetos-recentes1,
 .projetos-recentes2 {
   background-color: var(--bg-cards);
@@ -26,14 +27,14 @@ html {
 
 #card-direita,
 #card-esquerda {
-  margin: 5% 0% 5% 0%; /*20px*/ 
+  margin: 4% 0% 4% 0%; /*20px*/
 }
 
-.caixa-lateral-esquerda #card-esquerda{
-  padding: 5%
+.caixa-lateral-esquerda #card-esquerda {
+  padding: 5%;
 }
 
-.caixa-main #card-direita{
+.caixa-main #card-direita {
   padding: 3.5%;
 }
 
@@ -153,10 +154,10 @@ aside {
 .caixa-lateral-esquerda,
 #card-esquerda {
   box-sizing: border-box;
-  margin: 5%;
+  margin: 3%;
 }
 
-.caixa-lateral-esquerda{
+.caixa-lateral-esquerda {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,15 +168,24 @@ ul {
   list-style: none;
   padding: 0px;
 }
+
+/*Comprimento dos cards da esquerda*/
+.perfil-topo-esquerda,
+.links-redes-esquerda,
+.tecnologias-esquerda,
+.experiencias-esquerda,
+.educacao-esquerda {
+  width: 25vw;
+  min-width: 295px;
+}
+
 /*----------------------------------------Card Perfil---------------------------------------*/
 .perfil-topo-esquerda {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 25vw;
   height: 30vh;
-  min-width: 295px;
   min-height: 340px;
 }
 
@@ -191,18 +201,16 @@ ul {
   border: 2px solid #00ff00;
 }
 
-#card-foto{
+#card-foto {
   margin: 5%;
 }
 
 /*-----------------------------------------Card Redes-----------------------------------------*/
 .links-redes-esquerda {
-  width: 25vw;
   height: 55vh;
-  min-width: 295px;
   min-height: 360px;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 
 .redes-ul {
@@ -217,7 +225,7 @@ ul {
 }
 
 .redes-img {
-  padding-right: 20px;
+  padding-right: 8%;
   width: 24px;
   height: 24px;
 }
@@ -226,9 +234,9 @@ ul {
 
 .tecnologias-esquerda {
   box-sizing: border-box;
-  width: 25vw;
+
   height: 30vh;
-  min-width: 295px;
+
   min-height: 250px;
   padding: 8% 0% 5% 0%;
 }
@@ -261,9 +269,9 @@ ul {
 
 .experiencias-esquerda {
   box-sizing: border-box;
-  width: 25vw;
+
   height: 60vh;
-  min-width: 295px;
+
   min-height: 450px;
 }
 
@@ -287,9 +295,9 @@ ul {
 
 .educacao-esquerda {
   box-sizing: border-box;
-  width: 25vw;
+
   height: 60vh;
-  min-width: 295px;
+
   min-height: 450px;
 }
 
@@ -323,7 +331,6 @@ main {
 
 /*------------------------------Card Meus Projetos------------------------------*/
 .meus-projetos-direita {
-  grid-area: meusprojetos;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -352,25 +359,26 @@ main {
 
 /*-------------------------------Cards projetos recentes -------------------------------*/
 .projetos-recentes1 {
-  grid-area: projeto1;
   width: 50vw;
   min-width: 250px;
   padding: 5%;
-  margin-right: 3%;
+  margin-right: 2%;
 }
 
 .projetos-recentes2 {
-  grid-area: projeto2;
   width: 50vw;
   min-width: 250px;
   padding: 5%;
-  margin-left: 3%;
+  margin-left: 2%;
 }
 
 .git-img,
 .pasta-img {
   width: 20px;
   height: 20px;
+}
+
+.pasta-img {
   margin-right: 15px;
 }
 
@@ -402,7 +410,6 @@ main {
 /*--------------------------Card Postagens Recentes--------------------------*/
 
 .posts-recentes-direita {
-  grid-area: recente;
   width: 55vw;
   height: 5vh;
   min-width: 600px;
@@ -412,7 +419,6 @@ main {
 /*-------------------------------Card Postagem-------------------------------*/
 
 .postagem-direita {
-  grid-area: post;
   display: flex;
   flex-direction: row;
   align-items: center;
